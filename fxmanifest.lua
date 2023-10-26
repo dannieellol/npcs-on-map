@@ -7,10 +7,11 @@ version '1.0.0'
 
 client_scripts {
     'client.lua',
-	'config.lua'
 }
 
-print "+---------------------------------------------+"
-print "¦SecondLife_NPCsOnMap started successfully ...¦"
-print "+---------------------------------------------+"
+shared_scripts{
+    "config.lua" -- config ist in shared, damit es server und client ausgeführt wird für den print
+}
+
+
 client_script "@Badger-Anticheat/acloader.lua"
